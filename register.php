@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_PO
         $notification = "❌ Please complete the CAPTCHA.";
         $notificationType = "error";
     } else {
-        $recaptchaSecret = '6LfJnkgrAAAAAAlBZ4XDgGndU1sSb99nfWDQLXIX';
+        $recaptchaSecret = '6Lf6zTwrAAAAAKYA-hxLiRBRa-LD9fInaw2w-iNY';
         $recaptchaResponse = $_POST['g-recaptcha-response'];
         $verifyResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptchaSecret}&response={$recaptchaResponse}");
         $responseData = json_decode($verifyResponse);
