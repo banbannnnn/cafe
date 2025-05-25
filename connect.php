@@ -1,11 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "blissful_bites"; // Change this
-
-$conn = new mysqli($servername, $username, $password, $database);
+$serverName = $_SERVER['SERVER_NAME'] ?? 'localhost';
+if ($serverName === 'localhost' || $serverName === '127.0.0.1') {
+    $db_host = 'localhost';
+    $db_user = 'root';
+    $db_pass = '';
+    $db_name = 'blissful_bites';
+} else {
+    $db_host = 'localhost';
+    $db_user = 'u801377270_blissful_bites';
+    $db_pass = 'Blissful_bites2025';
+    $db_name = 'u801377270_blissful_bites';
+}
+$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-?>
