@@ -26,9 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $update->bind_param("ss", $reset_code, $email);
             $update->execute();
 
-            require 'phpmailer/src/Exception.php';
-            require 'phpmailer/src/PHPMailer.php';
-            require 'phpmailer/src/SMTP.php';
+          require 'phpmailer/src/Exception.php';
+          require 'phpmailer/src/PHPMailer.php';
+          require 'phpmailer/src/SMTP.php';
 
             $mail = new PHPMailer\PHPMailer\PHPMailer();
             $mail->isSMTP();
