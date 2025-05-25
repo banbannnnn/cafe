@@ -97,13 +97,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_PO
         $notification = "❌ Please complete the CAPTCHA.";
         $notificationType = "error";
     } else {
-        $recaptchaSecret = '6LfhpkgrAAAAAC8CkTXx_PRgLywfFlaa_giWirxS';
+        $recaptchaSecret = '6LfhpkgrAAAAAHK9ITHFkUuABfed2Zfnz_ZATPcp';
         $recaptchaResponse = $_POST['g-recaptcha-response'];
         $verifyResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptchaSecret}&response={$recaptchaResponse}");
         $responseData = json_decode($verifyResponse);
 
         if (!$responseData->success) {
-            $notification = "❌ CAPTCHA verification failed. Please try again. $test";
+            $notification = "❌ CAPTCHA verification failed. Please try again.";
             $notificationType = "error";
         } else {
             // Proceed with login
@@ -140,19 +140,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_PO
 
     // reCAPTCHA check first
     if (!isset($_POST['g-recaptcha-response']) || empty($_POST['g-recaptcha-response'])) {
-
-      
         $notification = "❌ Please complete the CAPTCHA.";
         $notificationType = "error";
     } else {
-        $recaptchaSecret = '6LfhpkgrAAAAAC8CkTXx_PRgLywfFlaa_giWirxS';
+        $recaptchaSecret = '6LfhpkgrAAAAAHK9ITHFkUuABfed2Zfnz_ZATPcp';
         $recaptchaResponse = $_POST['g-recaptcha-response'];
         $verifyResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptchaSecret}&response={$recaptchaResponse}");
         $responseData = json_decode($verifyResponse);
 
         if (!$responseData->success) {
-          $test = $_POST['g-recaptcha-response'];
-            $notification = "❌ CAPTCHA verification failed. Please try again. $test";
+            $notification = "❌ CAPTCHA verification failed. Please try again.";
             $notificationType = "error";
         } else {
             // Proceed with user authentication
@@ -436,7 +433,7 @@ a:hover {
       <p id="passwordMismatch">Email or Password is incorrect.</p>
 
       <br/>
-      <div class="g-recaptcha" data-sitekey="6LfhpkgrAAAAAHK9ITHFkUuABfed2Zfnz_ZATPcp"></div>
+      <div class="g-recaptcha" data-sitekey="6LfhpkgrAAAAAC8CkTXx_PRgLywfFlaa_giWirxS"></div>
 
       <br/>
       <button type="submit">Login</button>
