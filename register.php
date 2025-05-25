@@ -140,6 +140,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_PO
 
     // reCAPTCHA check first
     if (!isset($_POST['g-recaptcha-response']) || empty($_POST['g-recaptcha-response'])) {
+
+      $test = $_POST['g-recaptcha-response'];
         $notification = "❌ Please complete the CAPTCHA.";
         $notificationType = "error";
     } else {
@@ -149,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_PO
         $responseData = json_decode($verifyResponse);
 
         if (!$responseData->success) {
-            $notification = "❌ CAPTCHA verification failed. Please try again.";
+            $notification = "❌ CAPTCHA verification failed. Please try again. $test";
             $notificationType = "error";
         } else {
             // Proceed with user authentication
