@@ -97,8 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_PO
         $notification = "❌ Please complete the CAPTCHA.";
         $notificationType = "error";
     } else {
-        $recaptchaSecret = '6LejpUgrAAAAAHBK0mJV0bmQOXWZAPO2daMG4wA5
-';
+        $recaptchaSecret = '6LfhpkgrAAAAAC8CkTXx_PRgLywfFlaa_giWirxS';
         $recaptchaResponse = $_POST['g-recaptcha-response'];
         $verifyResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptchaSecret}&response={$recaptchaResponse}");
         $responseData = json_decode($verifyResponse);
@@ -146,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_PO
         $notification = "❌ Please complete the CAPTCHA.";
         $notificationType = "error";
     } else {
-        $recaptchaSecret = '6LejpUgrAAAAAP6kX2yYUBu1fQ3o1N18Uxow6vhM';
+        $recaptchaSecret = '6LfhpkgrAAAAAC8CkTXx_PRgLywfFlaa_giWirxS';
         $recaptchaResponse = $_POST['g-recaptcha-response'];
         $verifyResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptchaSecret}&response={$recaptchaResponse}");
         $responseData = json_decode($verifyResponse);
@@ -437,7 +436,7 @@ a:hover {
       <p id="passwordMismatch">Email or Password is incorrect.</p>
 
       <br/>
-      <div class="g-recaptcha" data-sitekey="6LejpUgrAAAAAHBK0mJV0bmQOXWZAPO2daMG4wA5"></div>
+      <div class="g-recaptcha" data-sitekey="6LfhpkgrAAAAAHK9ITHFkUuABfed2Zfnz_ZATPcp"></div>
 
       <br/>
       <button type="submit">Login</button>
