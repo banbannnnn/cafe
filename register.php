@@ -4,9 +4,9 @@ include 'connect.php';
 $notification = "";
 $notificationType = "";
 
-require 'PHPMailer\src\Exception.php';
-require 'PHPMailer\src\PHPMailer.php';
-require 'PHPMailer\src\SMTP.php';
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
 
 // Registration logic
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['first_name'])) {
