@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product>
+
+<pastry>
+<image>croissant.jpg</image>
+<name>Croissant</name>
+<type>BAKED GOODS</type>
+<price>180</price>
+</pastry>
+
+
+<pastry>
+<image>strawberrycroissant.jpg</image>
+<name>Strawberry Croissant</name>
+<type>BAKED GOODS</type>
+<price>270</price>
+</pastry>
+
+<pastry>
+<image>creampuff.jpg</image>
+<name>Cream Puff</name>
+<type>BAKED GOODS</type>
+<price>150</price>
+</pastry>
+
+<pastry>
+<image>plaincinnamon.jpg</image>
+<name>Plain Cinnamon Roll</name>
+<type>BAKED GOODS</type>
+<price>230</price>
+</pastry>
+
+
+<pastry>
+<image>whitecinnamon.jpg</image>
+<name> White Cinnamon</name>
+<type>BAKED GOODS</type>
+<price>270</price>
+</pastry>
+
+<pastry>
+<image>basquesliced.jpg</image>
+<name>Basque Burnt Cheesecake (SLICED)</name>
+<type>CAKES</type>
+<price>320</price>
+</pastry>
+
+<pastry>
+<image>basquewhole.jpg</image>
+<name>Basque Burnt Cheesecake (WHOLE)</name>
+<type>CAKES</type>
+<price>2500</price>
+</pastry>
+
+<pastry>
+<image>strawberrycheescakesliced.jpg</image>
+<name>Strawberry Cheesecake (SLICED)</name>
+<type>CAKES</type>
+<price>330</price>
+</pastry>
+
+<pastry>
+<image>strawberrycheescakewhole.jpg</image>
+<name>Strawberry Cheesecake (WHOLE)</name>
+<type>CAKES</type>
+<price>2400</price>
+</pastry>
+
+<pastry>
+<image>blueberrysliced.jpg</image>
+<name>Blueberry Cheesecake (SLICED)</name>
+<type>CAKES</type>
+<price>330</price>
+</pastry>
+
+<pastry>
+<image>blueberrywhole.jpg</image>
+<name>Blueberry Cheesecake (WHOLE)</name>
+<type>CAKES</type>
+<price>2400</price>
+</pastry>
+
+<pastry>
+<image>tiramisusliced.jpg</image>
+<name>Tiramisu Cake</name>
+<type>CAKES</type>
+<price>365</price>
+</pastry>
+
+<pastry>
+<image>tiramisuwhole.jpg</image>
+<name>Tiramisu Cake</name>
+<type>CAKES</type>
+<price>2900</price>
+</pastry>
+
+<pastry>
+<image>redvelvet.jpg</image>
+<name>Red Velvet Cake</name>
+<type>CAKES</type>
+<price>240</price>
+</pastry>
+
+<pastry>
+<image>redvelvetwhole.jpg</image>
+<name>Red Velvet Cake</name>
+<type>CAKES</type>
+<price>1900</price>
+</pastry>
+
+<pastry>
+<image>chocolatechip.jpg</image>
+<name>Chocolate Chip Cookies</name>
+<type>COOKIES &amp; BARS</type>
+<price>80</price>
+</pastry>
+
+<pastry>
+<image>oatmealcookies.jpg</image>
+<name>Oatmeal Raisin Cookies</name>
+<type>COOKIES &amp; BARS</type>
+<price>120</price>
+</pastry>
+
+<pastry>
+<image>buttercookie.jpg</image>
+<name>Plain Butter Cookies</name>
+<type>COOKIES &amp; BARS</type>
+<price>65</price>
+</pastry>
+
+<pastry>
+<image>brownies.jpg</image>
+<name>Brownies</name>
+<type>COOKIES &amp; BARS</type>
+<price>80</price>
+</pastry>
+
+<pastry>
+<image>walnutbrownies.jpg</image>
+<name>Walnut Brownies</name>
+<type>COOKIES &amp; BARS</type>
+<price>100</price>
+</pastry>
+
+<pastry>
+<image>applepie.jpg</image>
+<name>Apple Pie</name>
+<type>PIES &amp; WAFFLES</type>
+<price>180</price>
+</pastry>
+
+<pastry>
+<image>eggtart.jpg</image>
+<name>Egg Pie</name>
+<type>PIES &amp; WAFFLES</type>
+<price>160</price>
+</pastry>
+
+<pastry>
+<image>belgianwaffle.jpg</image>
+<name>Belgian Waffle</name>
+<type>PIES &amp; WAFFLES</type>
+<price>170</price>
+</pastry>
+
+<pastry>
+<image>lotuscruffle.jpg</image>
+<name>Lotus Cruffle</name>
+<type>PIES &amp; WAFFLES</type>
+<price>210</price>
+</pastry>
+
+<pastry>
+<image>strawberrywaffle.jpg</image>
+<name>Strawberries &amp; Cream Waffle</name>
+<type>PIES &amp; WAFFLES</type>
+<price>210</price>
+</pastry>
+
+
+<pastry>
+<image>chocolatedonuts.jpg</image>
+<name>Chocolate</name>
+<type>DOUGHNUTS</type>
+<price>70</price>
+</pastry>
+
+<pastry>
+<image>strawberrydonut.jpg</image>
+<name>Strawberry</name>
+<type>DOUGHNUTS</type>
+<price>90</price>
+</pastry>
+
+<pastry>
+<image>glazedd.jpg</image>
+<name>Glazed</name>
+<type>DOUGHNUTS</type>
+<price>65</price>
+</pastry>
+
+<pastry>
+<image>biscoffdonut.jpg</image>
+<name>Bisoff</name>
+<type>DOUGHNUTS</type>
+<price>120</price>
+</pastry>
+
+<pastry>
+<image>alca.jpg</image>
+<name>Alcapone</name>
+<type>DOUGHNUTS</type>
+<price>90</price>
+</pastry>
+
+<pastry>
+<image>spaghetti.jpg</image>
+<name>Spaghetti Bolognese</name>
+<type>PASTA</type>
+<price>420</price>
+</pastry>
+
+<pastry>
+<image>carbonara.jpg</image>
+<name>Carbonara</name>
+<type>PASTA</type>
+<price>420</price>
+</pastry>
+
+<pastry>
+<image>pennearrabbiata.jpg</image>
+<name>Penne Arrabbiata</name>
+<type>PASTA</type>
+<price>460</price>
+</pastry>
+
+<pastry>
+<image>bakedmacaroni.jpg</image>
+<name>Baked Macaroni</name>
+<type>PASTA</type>
+<price>390</price>
+</pastry>
+
+<pastry>
+<image>pestopasta.jpg</image>
+<name>Pesto Pasta</name>
+<type>PASTA</type>
+<price>410</price>
+</pastry>
+
+<pastry>
+<image>grilledchickenbreast.jpg</image>
+<name>Grilled Chicken Breast</name>
+<type>MAINS</type>
+<price>450</price>
+</pastry>
+
+<pastry>
+<image>beefsteak.jpg</image>
+<name>Beef Steak</name>
+<type>MAINS</type>
+<price>435</price>
+</pastry>
+
+<pastry>
+<image>roastporkbelly.jpg</image>
+<name>Roast Pork Belly</name>
+<type>MAINS</type>
+<price>510</price>
+</pastry>
+
+<pastry>
+<image>garlicbuttershrimp.jpg</image>
+<name>Garlic Butter Shrimp</name>
+<type>MAINS</type>
+<price>450</price>
+</pastry>
+
+<pastry>
+<image>vegetablestirfry.jpg</image>
+<name>Vegetable Stir-Fry</name>
+<type>MAINS</type>
+<price>410</price>
+</pastry>
+
+<pastry>
+<image>icedcoffee.jpg</image>
+<name>Iced Coffee</name>
+<type>DRINKS</type>
+<price>235</price>
+</pastry>
+
+<pastry>
+<image>icedmatcha.jpg</image>
+<name>Iced Matcha</name>
+<type>DRINKS</type>
+<price>245</price>
+</pastry>
+
+<pastry>
+<image>lemonjuice.jpg</image>
+<name>Lemon Juice</name>
+<type>DRINKS</type>
+<price>200</price>
+</pastry>
+
+<pastry>
+<image>watermelonjuice.jpg</image>
+<name>Watermelon Juice</name>
+<type>DRINKS</type>
+<price>210</price>
+</pastry>
+
+<pastry>
+<image>icedlatte.jpg</image>
+<name>Iced Latte</name>
+<type>DRINKS</type>
+<price>220</price>
+</pastry>
+
+
+
+
+
+
+
+
+</product>

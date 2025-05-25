@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - Blissful Bites</title>
+  <link rel="icon" href="logo1.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #fafafa;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eee;
+      background-color: #fff;
+    }
+
+    .logo img {
+      height: 100px;
+      width: 100px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #9f4262;
+      font-weight: 600;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .icons i {
+      font-size: 24px;
+      color: #422d4a;
+      cursor: pointer;
+    }
+
+    /* WRAPPER to center page content */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      max-width: 1200px;
+      gap: 40px;
+      margin-left: 400px;
+    }
+
+    .order-section {
+      width: 100%;
+    }
+
+    .order-box {
+      width: 600px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      padding: 20px;
+      background-color: #ffe0dd;
+      align-items: center;
+      border-radius: 10px;
+      margin-bottom: 100px;
+    }
+
+    .total {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: right;
+      color: #9f4262;
+    }
+
+    .place-order {
+      background-color: #b18584;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 300px;
+      font-size: 16px;
+      cursor: pointer;
+      align-items: center;
+      margin-left: 130px;
+      border-radius: 10px;
+    }
+
+    .place-order:hover {
+      background-color: #9a6f6f;
+    }
+
+    .info-box {
+      background-color: #fff6f6;
+      padding: 10px;
+      margin-top: 20px;
+      color: rgb(67, 67, 67);
+    }
+
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none; 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      background-color: rgba(0, 0, 0, 0.5); 
+      justify-content: center; 
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 10px;
+      width: 300px;
+    }
+
+    .modal button {
+      background-color: #b18584;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .modal button:hover {
+      background-color: #9a6f6f;
+    }
+
+    label a {
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make text bold */
+  color: #9f4262; /* Optional: Change color if you want */
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="Blissful Bites Logo">
+    </div>
+    <nav>
+      <a href="home.html">HOME</a>
+      <a href="#">ABOUT US</a>
+      <a href="menu.html">MENU</a>
+      <a href="#">CONTACT US</a>
+      <a href="#" style="background: #D2A19F; color: white; padding: 8px 12px; border-radius: 5px;">ORDER NOW</a>
+    </nav>
+    <div class="icons">
+      <a href="cart.html">
+        <i class='bx bx-shopping-bag'></i>
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="order-section">
+      <h2>Your order</h2>
+      <div class="order-box" id="order-box">
+        <div id="cart-items"></div>
+
+        <p style="display: flex; justify-content: space-between; color:  #9f4262; font-weight: bold;">
+          <span>Subtotal: </span><span id="subtotal" style="text-align: right;">0.00</span>
+        </p>
+        <p style="display: flex; justify-content: space-between; color:  #9f4262; font-weight: bold;">
+          <span>Shipping Fee: </span><span style="text-align: right;">75.00</span>
+        </p>
+
+        <br/>
+
+        <div class="total">
+          <p>Total: ₱<span id="total">0.00</span></p>
+        </div>
+
+        <br/>
+
+        <p style="color:  #9f4262; font-weight: bold;"> Payment Method: <span id="payment-method">Cash on Pick Up</span></p>
+
+        <div class="info-box">
+          <p><strong>Address:</strong> Bonifacio High Street Central, 7th Ave, Taguig, 1634 Metro Manila, Philippines</p>
+
+          <p><strong style="color: red;">Note:</strong> Please indicate on the <strong>Order Notes</strong> your special instructions for the driver and your order preferences.</p>
+        </div>
+
+      
+        <!-- 
+<br/>
+<label class="custom-checkbox">
+  <input type="checkbox" required> 
+  I have read and agree to the website <a href="#">terms and conditions</a>
+</label>
+-->
+
+        
+     
+        <br/>
+        <br/>
+
+        <button class="place-order" onclick="placeOrder()">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <h3>Thank you for your order!</h3>
+      <button onclick="closeModal()">Okay</button>
+    </div>
+  </div>
+
+  <script>
+    const cartItemsContainer = document.getElementById("cart-items");
+    const totalElement = document.getElementById("total");
+    const subtotalElement = document.getElementById("subtotal");
+    const paymentMethodElement = document.getElementById("payment-method");
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let subtotal = 0;
+    const shippingFee = 75;
+
+    function updateTotal() {
+      let total = subtotal + shippingFee;
+      totalElement.textContent = total.toFixed(2);
+    }
+
+    function displayCartItems() {
+      cartItemsContainer.innerHTML = "";
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+        subtotal = 0;
+        updateTotal();
+        return;
+      }
+
+      subtotal = 0;
+
+      cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+
+        const itemEl = document.createElement("div");
+        itemEl.classList.add("order-item");
+        itemEl.innerHTML = `<span>${item.name} × ${item.quantity}</span>
+                            <span class="item-price">₱${itemTotal.toFixed(2)}</span>`;
+        cartItemsContainer.appendChild(itemEl);
+      });
+
+      subtotalElement.textContent = subtotal.toFixed(2);
+      updateTotal();
+    }
+
+    function placeOrder() {
+  // Set the message in sessionStorage
+  sessionStorage.setItem("orderMessage", "Thank you for your order!");
+  
+  // Redirect to billing.html
+  window.location.href = "billing.html";
+}
+
+    function closeModal() {
+    // Close modal and redirect to menu
+    document.getElementById('orderModal').style.display = 'none';
+    window.location.href = "menu.html"; // Redirecting to the menu page
+  }
+
+    // Function to fetch the saved payment method
+    function displayPaymentMethod() {
+      const paymentMethod = localStorage.getItem('paymentMethod');
+      const paymentMethodElement = document.getElementById('payment-method');
+
+      // Set the payment method text
+      if (paymentMethod) {
+        paymentMethodElement.innerHTML = `<strong>${paymentMethod}</strong>`;
+      }
+    }
+
+    // Call the function to display the payment method when the page loads
+    displayPaymentMethod();
+
+    // Initialize
+    displayCartItems();
+  </script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu - Blissful Bites</title>
+  <link rel="icon" href="logo1.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: black;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo img {
+      height: 100px;
+      width: 100px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #9f4262;
+      font-weight: 600;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+    }
+
+    .icons i {
+      font-size: 24px;
+      color: #2d2d4a;
+      cursor: pointer;
+    }
+
+    #searchInput {
+      display: none;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .menu {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 2rem;
+      flex-grow: 1;
+      transition: all 0.3s ease;
+      min-height: 500px;
+    }
+
+    .item {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 200px;
+      text-align: center;
+      background: white;
+      height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+
+    .item img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .item h3 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+    }
+
+    .item p {
+      font-weight: bold;
+      margin: 5px 0 10px;
+    }
+
+    .item button {
+      background: #D2A19F;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      width: 200px;
+      padding: 1rem;
+      border-right: 1px solid #eee;
+    }
+
+    .main-container {
+      display: flex;
+    }
+
+    .category-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .checkbox-list label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .shopping-bag-count {
+      position: relative;
+      top: -8px;
+      right: 10px;
+      background-color: red;
+      color: white;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 50%;
+    }
+
+    #cart-message {
+  display: none;
+  font-size: 14px;
+  color: #2d2d4a;
+  text-align: left;  /* Align the text to the left */
+  padding: 5px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.item button:hover {
+  background-color: #9e706f; /* Darker or contrasting color for hover */
+  transform: scale(1.05);    /* Slight zoom-in effect */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+<header>
+  <div class="logo">
+    <img src="logo.jpg" alt="Blissful Bites Logo">
+  </div>
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="#">ABOUT US</a>
+    <a href="menu.html">MENU</a>
+    <a href="#">CONTACT US</a>
+    <a href="#" style="background: #D2A19F; color: white; padding: 8px 12px; border-radius: 5px;">ORDER NOW</a>
+  </nav>
+  <div class="icons">
+    <input type="text" id="searchInput" placeholder="Search product...">
+    <i class='bx bx-search' onclick="toggleSearch()"></i>
+    <a href="cart.php">
+      <i class='bx bx-shopping-bag'></i>
+      <span class="shopping-bag-count" id="cart-count">0</span>
+    </a>
+    <!-- New section for showing the added product -->
+    <div id="cart-message">
+      <p id="added-product-name"></p>
+    </div>
+  </div>
+</header>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <button style="background: #D2A19F; color: white; padding: 10px; width: 100%; border: none; border-radius: 5px; font-weight: bold;" onclick="resetFilters()">Full List of Menu</button>
+      <br/><br/><br/>
+      <div class="category-title">Filter by Categories</div>
+      <div class="checkbox-list" id="filterCheckboxes">
+        <label><input type="checkbox" value="BAKED GOODS"> BAKED GOODS </label>
+        <label><input type="checkbox" value="CAKES"> CAKES </label>
+        <label><input type="checkbox" value="COOKIES & BARS"> COOKIES & BARS </label>
+        <label><input type="checkbox" value="PIES & WAFFLES"> PIES & WAFFLES </label>
+        <label><input type="checkbox" value="DOUGHNUTS"> DOUGHNUTS </label>
+        <label><input type="checkbox" value="PASTA"> PASTA </label>
+        <label><input type="checkbox" value="MAINS"> MAINS </label>
+        <label><input type="checkbox" value="DRINKS"> DRINKS </label>
+      </div>
+    </aside>
+
+    <!-- Menu Grid -->
+    <section class="menu" id="productWrapper">
+      <!-- Items will be loaded here -->
+    </section>
+  </div>
+
+  <script>
+    let allProducts = [];
+
+    function loadXMLData() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          const xmlDoc = this.responseXML;
+          const products = Array.from(xmlDoc.getElementsByTagName("pastry"));
+
+          allProducts = products.map(product => ({
+            image: product.getElementsByTagName("image")[0].textContent,
+            name: product.getElementsByTagName("name")[0].textContent,
+            type: product.getElementsByTagName("type")[0].textContent,
+            price: product.getElementsByTagName("price")[0].textContent
+          }));
+
+          displayProducts(allProducts);
+        }
+      };
+      xhttp.open("GET", "menu.xml", true);
+      xhttp.send();
+    }
+
+    function displayProducts(products) {
+      const wrapper = document.getElementById("productWrapper");
+      wrapper.innerHTML = '';
+
+      if (products.length === 0) {
+        wrapper.innerHTML = '<p>No menu items found.</p>';
+        return;
+      }
+
+      products.forEach(({ image, name, type, price }) => {
+        const itemHTML = `
+          <div class="item" data-category="${type}">
+            <img src="${image}" alt="${name}">
+            <h3>${name}</h3>
+            <p>₱${price}</p>
+            <button onclick="addToCart('${name}', '${price}', '${image}')">Add to cart</button>
+          </div>
+        `;
+        wrapper.innerHTML += itemHTML;
+      });
+    }
+
+    function addToCart(name, price, image) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ name, price: parseFloat(price), image, quantity: 1 });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+      showCartMessage(name);  // Show message with product name
+    }
+
+    function updateCartCount() {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+      document.getElementById("cart-count").textContent = totalItems;
+    }
+
+    function showCartMessage(name) {
+      const cartMessage = document.getElementById("cart-message");
+      const addedProductName = document.getElementById("added-product-name");
+
+      addedProductName.textContent = `${name} has been added to your cart!`;  // Product name message
+      cartMessage.style.display = 'block';  // Show the message
+
+      setTimeout(() => {
+        cartMessage.style.display = 'none';  // Hide the message after 5 seconds
+      }, 3000);
+    }
+
+    function setupFiltering() {
+      const checkboxes = document.querySelectorAll('#filterCheckboxes input[type="checkbox"]');
+
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+          const selected = Array.from(checkboxes)
+            .filter(c => c.checked)
+            .map(c => c.value);
+
+          if (selected.length === 0) {
+            displayProducts(allProducts);
+          } else {
+            const filtered = allProducts.filter(p => selected.includes(p.type));
+            displayProducts(filtered);
+          }
+        });
+      });
+    }
+
+    function resetFilters() {
+      const checkboxes = document.querySelectorAll('#filterCheckboxes input[type="checkbox"]');
+      checkboxes.forEach(c => c.checked = false);
+      displayProducts(allProducts);
+    }
+
+    function toggleSearch() {
+      const searchInput = document.getElementById("searchInput");
+      if (searchInput.style.display === "none") {
+        searchInput.style.display = "inline-block";
+        searchInput.focus();
+      } else {
+        searchInput.style.display = "none";
+        searchInput.value = '';
+        displayProducts(allProducts);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchInput = document.getElementById("searchInput");
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+        const filtered = allProducts.filter(product =>
+          product.name.toLowerCase().includes(query)
+        );
+        displayProducts(filtered);
+      });
+    });
+
+    window.onload = function () {
+      loadXMLData();
+      setupFiltering();
+      updateCartCount();
+    };
+  </script>
+</body>
+</html>
