@@ -564,19 +564,19 @@ footer {
       <div class="slider" id="slider">
         <div class="card"><img src="straw.jpg" alt="Straw"><p>Strawberry Cheesecake</p></div>
         <div class="card"><img src="grilled.jpg" alt="Grilled"><p>Grilled Chicken Breast</p></div>
-        <div class="card"><img src="Brownies.jpg" alt="Brownies"><p>Brownies</p></div>
+        <div class="card"><img src="brownies.jpg" alt="Brownies"><p>Brownies</p></div>
         <div class="card"><img src="lemonjuice.jpg" alt="Lemon Juice"><p>Lemon Juice</p></div>
         <div class="card"><img src="macaroni.jpg" alt="Macaroni"><p>Baked Macaroni</p></div>
         <div class="card"><img src="strawberrydonut.jpg" alt="Donut"><p>Strawberry Donut</p></div>
         <div class="card"><img src="croissant.jpg" alt="Croissant"><p>Buttery Croissant</p></div>
         <div class="card"><img src="pesto.jpg" alt="Pesto"><p>Pesto Pasta</p></div>
         <div class="card"><img src="matcha.jpg" alt="Matcha"><p>Iced Matcha</p></div>
-        <div class="card"><img src="Applepie.jpg" alt="Apple Pie"><p>Apple Pie</p></div>
+        <div class="card"><img src="applepie.jpg" alt="Apple Pie"><p>Apple Pie</p></div>
       </div>
       <button class="slider-btn next" onclick="slideCarousel(1)">&#10095;</button>
     </div>
   </section>
-
+  
   <!-- JavaScript -->
   <script>
     function toggleSearch() {
