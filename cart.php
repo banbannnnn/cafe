@@ -176,7 +176,7 @@ nav a:last-child:hover {
 
     .total-summary {
       width: 300px;
-      height: 330px;
+      height: 230px;
       flex-shrink: 0;
       background: #ebe8e8ea;
       padding: 1.5rem;
@@ -365,17 +365,7 @@ nav a:last-child:hover {
   totalSummary.innerHTML = `
     <p><strong>Subtotal</strong><span style="float:right;">₱${subtotal.toFixed(2)}</span></p>
     <p><strong>Shipping Fee</strong><span style="float:right;">₱${shippingFee.toFixed(2)}</span></p>
-    <p><strong>Payment Method</strong></p>
-    <div class="payment-option">
-      <label>
-        <input type="radio" name="payment" value="Gcash" checked> GCash
-      </label>
-    </div>
-    <div class="payment-option">
-      <label>
-        <input type="radio" name="payment" value="COD"> Cash on Delivery
-      </label>
-    </div>
+    
     <h3>Total <span id="total-display" style="float:right;">₱${grandTotal.toFixed(2)}</span></h3>
    <button onclick="window.location.href='checkout.php'">Proceed to Checkout</button>
   `;
@@ -404,11 +394,7 @@ nav a:last-child:hover {
 
   // Save payment method and redirect to checkout page
   function checkout() {
-    const paymentMethodInput = document.querySelector('input[name="payment"]:checked');
-    if (!paymentMethodInput) {
-      alert("Please select a payment method.");
-      return;
-    }
+   
     const paymentMethod = paymentMethodInput.value;
     localStorage.setItem('paymentMethod', paymentMethod);
     window.location.href = 'checkout.php';
