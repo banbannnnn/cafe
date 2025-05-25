@@ -149,7 +149,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_PO
         $responseData = json_decode($verifyResponse);
 
         if (!$responseData->success) {
-            $notification = "❌ CAPTCHA verification failed. Please try again. $recaptcha-response";
+            $notification = "❌ CAPTCHA verification failed. Please try again.";
             $notificationType = "error";
         } else {
             // Proceed with user authentication
