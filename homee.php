@@ -529,7 +529,7 @@ footer {
         <div class="card"><img src="croissant.jpg" alt="Croissant"><p>Buttery Croissant</p></div>
         <div class="card"><img src="pesto.jpg" alt="Pesto"><p>Pesto Pasta</p></div>
         <div class="card"><img src="matcha.jpg" alt="Matcha"><p>Iced Matcha</p></div>
-        <div class="card"><img src="Applepie.jpg" alt="Apple Pie"><p>Apple Pie</p></div>
+        <div class="card"><img src="applepie.jpg" alt="Apple Pie"><p>Apple Pie</p></div>
       </div>
       <button class="slider-btn next" onclick="slideCarousel(1)">&#10095;</button>
     </div>
